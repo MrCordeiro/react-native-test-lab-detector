@@ -4,7 +4,7 @@ package com.pluckd.testlabdetector
 internal const val TEST_LAB_SETTING = "firebase.test.lab"
 
 // Never throws. If the read fails, the device does not count as a Test Lab device.
-internal fun isTestLab(readSetting: (String) -> String?): Boolean =
+internal fun readTestLabSetting(readSetting: (String) -> String?): Boolean =
   try {
     readSetting(TEST_LAB_SETTING) == "true"
   } catch (e: Exception) {

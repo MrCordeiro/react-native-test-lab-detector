@@ -46,7 +46,7 @@ CP="$TOOLS/junit-4.13.2.jar:$TOOLS/hamcrest-core-1.3.jar"
 OUT="$TOOLS/out"
 rm -rf "$OUT"
 
-# Only TestLabSetting.kt. The module file needs Android and Expo classes.
+# Only TestLabSetting.kt. The module files need Android and React Native classes.
 "$KOTLINC/bin/kotlinc" -nowarn -cp "$CP" -d "$OUT" \
   "$ROOT/android/src/main/$PKG/TestLabSetting.kt" \
   "$ROOT"/android/src/test/$PKG/*.kt

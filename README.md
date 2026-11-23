@@ -1,6 +1,6 @@
-# @pluckd/expo-test-lab-detector
+# @pluckd/react-native-test-lab-detector
 
-Detect Firebase Test Lab devices in an Expo app. The Google Play pre-launch report uses these devices.
+Detect Firebase Test Lab devices in a React Native app. Works in bare React Native and in Expo apps. The Google Play pre-launch report uses these devices.
 
 ## The problem
 
@@ -11,15 +11,17 @@ In one app, these robots were 89 of 111 users in the analytics tool for one mont
 ## Install
 
 ```sh
-npx expo install @pluckd/expo-test-lab-detector
+npm install @pluckd/react-native-test-lab-detector
 ```
 
-This package contains native Android code. After you install it, make a new native build (for example `npx expo run:android` or an EAS build). Expo Go does not include this module. In Expo Go, `isTestLab()` returns `false`.
+In an Expo app, use `npx expo install @pluckd/react-native-test-lab-detector` instead.
+
+This package contains native Android code (a Turbo Module). After you install it, make a new native build, for example `npx react-native run-android`, `npx expo run:android`, or an EAS build. Expo Go does not include this module. In Expo Go, `isTestLab()` returns `false`.
 
 ## Usage
 
 ```ts
-import { isTestLab } from '@pluckd/expo-test-lab-detector';
+import { isTestLab } from '@pluckd/react-native-test-lab-detector';
 
 if (isTestLab()) {
   // This is a Firebase Test Lab device.
@@ -30,7 +32,7 @@ if (isTestLab()) {
 
 ```ts
 import PostHog from 'posthog-react-native';
-import { isTestLab } from '@pluckd/expo-test-lab-detector';
+import { isTestLab } from '@pluckd/react-native-test-lab-detector';
 
 // Do not make a PostHog client on Test Lab devices.
 export const posthog = isTestLab()

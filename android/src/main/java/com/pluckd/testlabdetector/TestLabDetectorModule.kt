@@ -1,16 +1,21 @@
 package com.pluckd.testlabdetector
 
 import android.provider.Settings
-import expo.modules.kotlin.modules.Module
-import expo.modules.kotlin.modules.ModuleDefinition
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.module.annotations.ReactModule
 
-class TestLabDetectorModule : Module() {
-  override fun definition() = ModuleDefinition {
-    Name("TestLabDetector")
+@ReactModule(name = TestLabDetectorModule.NAME)
+class TestLabDetectorModule(reactContext: ReactApplicationContext) :
+  NativeTestLabDetectorSpec(reactContext) {
 
-    Function("isTestLab") {
-      val resolver = appContext.reactContext?.contentResolver ?: return@Function false
-      isTestLab { name -> Settings.System.getString(resolver, name) }
-    }
+  override fun getName() = NAME
+
+  override fun isTestLab(): Boolean {
+    val resolver = reactApplicationContext.contentResolver
+    return readTestLabSetting { name -> Settings.System.getString(resolver, name) }
+  }
+
+  companion object {
+    const val NAME = "TestLabDetector"
   }
 }
