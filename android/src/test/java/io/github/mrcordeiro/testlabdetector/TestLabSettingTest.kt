@@ -1,4 +1,4 @@
-package com.pluckd.testlabdetector
+package io.github.mrcordeiro.testlabdetector
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -9,28 +9,28 @@ class TestLabSettingTest {
   @Test
   fun readsTheDocumentedSetting() {
     var requested: String? = null
-    isTestLab { name -> requested = name; null }
+    readTestLabSetting { name -> requested = name; null }
     assertEquals("firebase.test.lab", requested)
   }
 
   @Test
   fun trueWhenSettingIsTrue() {
-    assertTrue(isTestLab { "true" })
+    assertTrue(readTestLabSetting { "true" })
   }
 
   @Test
   fun falseWhenSettingIsMissing() {
-    assertFalse(isTestLab { null })
+    assertFalse(readTestLabSetting { null })
   }
 
   @Test
   fun falseWhenSettingHasAnotherValue() {
-    assertFalse(isTestLab { "false" })
-    assertFalse(isTestLab { "" })
+    assertFalse(readTestLabSetting { "false" })
+    assertFalse(readTestLabSetting { "" })
   }
 
   @Test
   fun falseWhenReadThrows() {
-    assertFalse(isTestLab { throw SecurityException("denied") })
+    assertFalse(readTestLabSetting { throw SecurityException("denied") })
   }
 }

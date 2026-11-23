@@ -1,5 +1,5 @@
 {
-  "name": "@pluckd/expo-test-lab-detector",
+  "name": "react-native-test-lab-detector",
   "version": "0.1.0",
   "description": "Detect Firebase Test Lab devices, such as the Google Play pre-launch report robots.",
   "main": "build/index.js",
@@ -16,46 +16,48 @@
   },
   "keywords": [
     "react-native",
-    "expo",
     "android",
     "firebase-test-lab",
     "test-lab",
     "google-play",
     "pre-launch-report",
     "robo",
-    "analytics"
+    "analytics",
+    "expo",
+    "turbo-module"
   ],
-  "repository": "https://github.com/MrCordeiro/expo-test-lab-detector",
+  "repository": "https://github.com/MrCordeiro/react-native-test-lab-detector",
   "bugs": {
-    "url": "https://github.com/MrCordeiro/expo-test-lab-detector/issues"
+    "url": "https://github.com/MrCordeiro/react-native-test-lab-detector/issues"
   },
   "author": "Fernando Cordeiro (https://github.com/MrCordeiro)",
   "license": "MIT",
-  "homepage": "https://github.com/MrCordeiro/expo-test-lab-detector#readme",
+  "homepage": "https://github.com/MrCordeiro/react-native-test-lab-detector#readme",
   "devDependencies": {
     "@babel/core": "^7.26.0",
+    "@react-native/babel-preset": "0.88.1",
     "@react-native/jest-preset": "0.88.1",
+    "@react-native/typescript-config": "0.88.1",
     "@types/jest": "^30.0.0",
     "@types/react": "~19.3.0",
-    "babel-preset-expo": "~58.0.22",
     "eslint": "~9.39.4",
     "eslint-config-universe": "^16.1.2",
-    "expo": "^58.0.21",
     "jest": "^30.0.0",
-    "jest-expo": "~58.0.13",
     "prettier": "^3.0.0",
     "react": "19.3.0",
     "react-native": "0.88.1",
     "typescript": "~6.0.3"
   },
   "jest": {
-    "preset": "jest-expo",
+    "preset": "@react-native/jest-preset",
     "roots": [
       "<rootDir>/src"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(\\.pnpm|(jest-)?react-native|@react-native(-community)?)/)"
     ]
   },
   "peerDependencies": {
-    "expo": "*",
     "react": "*",
     "react-native": "*"
   },
@@ -66,9 +68,14 @@
     "!src/__tests__",
     "android/build.gradle",
     "android/src/main",
-    "expo-module.config.json"
+    "react-native.config.js"
   ],
-  "publishConfig": {
-    "access": "public"
+  "codegenConfig": {
+    "name": "RNTestLabDetectorSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "io.github.mrcordeiro.testlabdetector"
+    }
   }
 }
