@@ -16,3 +16,6 @@ android.iml
 # Node
 node_modules/
 npm-debug.log
+
+# Kotlin test tools (scripts/test-kotlin.sh)
+.tools/

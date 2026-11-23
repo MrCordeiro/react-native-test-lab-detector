@@ -25,3 +25,11 @@ jobs:
       - run: pnpm test
         env:
           CI: true
+
+  kotlin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # The runner image has Java, curl, and unzip.
+      - run: bash scripts/test-kotlin.sh

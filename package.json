@@ -11,7 +11,8 @@
     "test": "node internal/module_scripts/test.js",
     "prepare": "node internal/module_scripts/prepare.js",
     "open:android": "node internal/module_scripts/open-android.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:kotlin": "bash scripts/test-kotlin.sh"
   },
   "keywords": [
     "react-native",
