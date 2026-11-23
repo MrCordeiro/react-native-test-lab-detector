@@ -1,5 +1,5 @@
 {
-  "name": "@pluckd/react-native-test-lab-detector",
+  "name": "react-native-test-lab-detector",
   "version": "0.1.0",
   "description": "Detect Firebase Test Lab devices, such as the Google Play pre-launch report robots.",
   "main": "build/index.js",
@@ -26,13 +26,13 @@
     "expo",
     "turbo-module"
   ],
-  "repository": "https://github.com/MrCordeiro/expo-test-lab-detector",
+  "repository": "https://github.com/MrCordeiro/react-native-test-lab-detector",
   "bugs": {
-    "url": "https://github.com/MrCordeiro/expo-test-lab-detector/issues"
+    "url": "https://github.com/MrCordeiro/react-native-test-lab-detector/issues"
   },
   "author": "Fernando Cordeiro (https://github.com/MrCordeiro)",
   "license": "MIT",
-  "homepage": "https://github.com/MrCordeiro/expo-test-lab-detector#readme",
+  "homepage": "https://github.com/MrCordeiro/react-native-test-lab-detector#readme",
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@react-native/babel-preset": "0.88.1",
@@ -70,9 +70,6 @@
     "android/src/main",
     "react-native.config.js"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "codegenConfig": {
     "name": "RNTestLabDetectorSpec",
     "type": "modules",
