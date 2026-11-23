@@ -8,7 +8,7 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-  namespace 'com.pluckd.testlabdetector'
+  namespace 'io.github.mrcordeiro.testlabdetector'
   compileSdk safeExtGet('compileSdkVersion', 36)
   defaultConfig {
     minSdk safeExtGet('minSdkVersion', 24)

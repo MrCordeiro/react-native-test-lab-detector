@@ -6,7 +6,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 TOOLS="$ROOT/.tools"
-PKG="java/com/pluckd/testlabdetector"
+PKG="java/io/github/mrcordeiro/testlabdetector"
 KOTLIN_VERSION="2.1.0"
 
 sha256() {
@@ -52,4 +52,4 @@ rm -rf "$OUT"
   "$ROOT"/android/src/test/$PKG/*.kt
 
 java -cp "$OUT:$CP:$KOTLINC/lib/kotlin-stdlib.jar" org.junit.runner.JUnitCore \
-  com.pluckd.testlabdetector.TestLabSettingTest
+  io.github.mrcordeiro.testlabdetector.TestLabSettingTest

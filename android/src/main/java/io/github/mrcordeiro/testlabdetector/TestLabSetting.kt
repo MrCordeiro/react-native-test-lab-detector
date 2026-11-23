@@ -1,4 +1,4 @@
-package com.pluckd.testlabdetector
+package io.github.mrcordeiro.testlabdetector
 
 // Documented by Google: https://firebase.google.com/docs/test-lab/android/test-lab-play
 internal const val TEST_LAB_SETTING = "firebase.test.lab"

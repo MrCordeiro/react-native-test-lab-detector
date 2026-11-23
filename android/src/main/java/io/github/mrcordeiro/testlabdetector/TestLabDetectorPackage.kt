@@ -1,4 +1,4 @@
-package com.pluckd.testlabdetector
+package io.github.mrcordeiro.testlabdetector
 
 import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule

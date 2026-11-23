@@ -1,4 +1,4 @@
-package com.pluckd.testlabdetector
+package io.github.mrcordeiro.testlabdetector
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

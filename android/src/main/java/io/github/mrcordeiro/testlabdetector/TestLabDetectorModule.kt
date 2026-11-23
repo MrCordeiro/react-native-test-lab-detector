@@ -1,4 +1,4 @@
-package com.pluckd.testlabdetector
+package io.github.mrcordeiro.testlabdetector
 
 import android.provider.Settings
 import com.facebook.react.bridge.ReactApplicationContext
