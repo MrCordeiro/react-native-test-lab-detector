@@ -89,7 +89,7 @@ pnpm test          # Jest tests for the JS layer
 pnpm test:kotlin   # JUnit tests for the Android check
 ```
 
-`pnpm test:kotlin` needs Java 11 or later, `curl`, and `unzip`. It does not need Gradle or an Android SDK. It downloads a pinned Kotlin compiler and JUnit into `.tools/`.
+`pnpm test:kotlin` needs Java 11 to 21, `curl`, and `unzip`. It does not need Gradle or an Android SDK. It downloads a pinned Kotlin compiler and JUnit into `.tools/`.
 
 ## License
 

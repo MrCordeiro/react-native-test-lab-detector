@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Compiles the pure Kotlin logic and runs its JUnit tests.
-# Needs Java 11 or later, curl, and unzip. Needs no Gradle and no Android SDK.
+# Needs Java 11 to 21, curl, and unzip. Needs no Gradle and no Android SDK.
 # Downloads pinned tools into .tools/ and checks their SHA-256.
 set -euo pipefail
 
