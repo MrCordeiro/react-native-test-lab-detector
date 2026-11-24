@@ -2,6 +2,10 @@
 
 Detect Firebase Test Lab devices in a React Native app. Works in bare React Native and in Expo apps. The Google Play pre-launch report uses these devices.
 
+The current version is compatible with:
+
+- React Native 0.74 or newer.
+
 ## The problem
 
 After you upload a release to Google Play, the pre-launch report runs a robot (the Robo crawler) on Firebase Test Lab devices. The robot opens your app and taps through it. Your analytics tool records each robot as a real user.
@@ -16,7 +20,7 @@ npm install react-native-test-lab-detector
 
 In an Expo app, use `npx expo install react-native-test-lab-detector` instead.
 
-This package contains native Android code (a Turbo Module). After you install it, make a new native build, for example `npx react-native run-android`, `npx expo run:android`, or an EAS build. Expo Go does not include this module. In Expo Go, `isTestLab()` returns `false`.
+This package contains native Android code a Turbo Module). After you install it, make a new native build, for example `npx react-native run-android`, `npx expo run:android`, or an EAS build. Expo Go does not include this module. In Expo Go, `isTestLab()` returns `false`.
 
 ## Usage
 
